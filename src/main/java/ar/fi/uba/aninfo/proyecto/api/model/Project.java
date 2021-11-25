@@ -8,20 +8,28 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "TAREAS")
-public class Tarea {
+@Table(name = "PROJECTS")
+public class Project {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(unique = true, nullable = false)
 	private Long id;
 	private String name;
-	private Long idProject;
-
-	public Tarea(final Long id, final String name, final Long idProject) {
+	private String lider;
+	
+	public Project(final Long id, final String name, final String lider) {
 		this.setId(id);
-		this.setName(name);
-		this.setIdProject(idProject);
+		this.name = name;
+		this.setLider(lider);
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Long getId() {
@@ -32,20 +40,12 @@ public class Tarea {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getLider() {
+		return lider;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Long getIdProject() {
-		return idProject;
-	}
-
-	public void setIdProject(Long idProject) {
-		this.idProject = idProject;
+	public void setLider(String lider) {
+		this.lider = lider;
 	}
 
 }
