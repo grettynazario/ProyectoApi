@@ -1,0 +1,13 @@
+{
+    "version": "0.0.1",
+    "database": {           
+        "url": "jdbc:oracle:thin:@//localhost:1521/inazario",
+        "username": "SYSTEM",
+        "password": "Gretty.03"
+        },
+	"server": {
+		 "host": "127.0.0.1",
+         "port": 8080
+	}
+
+}
