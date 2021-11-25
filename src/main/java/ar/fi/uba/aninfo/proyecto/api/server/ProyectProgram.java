@@ -17,6 +17,7 @@ public class ProyectProgram {
 		this.config = generator.generateConfig();
 		
 		
+		
 	}
 
 }
